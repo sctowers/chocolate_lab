@@ -18,4 +18,8 @@ public class ChocolateService {
         return chocolateRepository.save(chocolate);
     }
 
+
+    public List<Chocolate> getAllChocolates() {
+        return chocolateRepository.findAll();
+    }
 }

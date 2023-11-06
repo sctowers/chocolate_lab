@@ -5,6 +5,8 @@ import com.bnta.chocolate.repositories.EstateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EstateServices {
 
@@ -13,5 +15,9 @@ public class EstateServices {
 
     public Estate saveEstate(Estate estate){
         return estateRepository.save(estate);
+    }
+
+    public List<Estate> getAllEstates(){
+        return estateRepository.findAll();
     }
 }
